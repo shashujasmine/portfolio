@@ -1,8 +1,8 @@
-# 🎮 RETRO PORTFOLIO - 80s/90s Aesthetic
+#  RETRO PORTFOLIO - 80s/90s Aesthetic
 
 A stunning personal portfolio website with authentic retro 80s/90s design aesthetic, complete with neon colors, glitch effects, CRT screen effects, pixel art elements, and smooth animations.
 
-## 🌟 Features
+##  Features
 
 ### Design Elements
 - **Neon Color Palette**: Vibrant pink (#FF10F0), cyan (#00FFFF), purple (#B413FF) on dark background
@@ -39,7 +39,7 @@ A stunning personal portfolio website with authentic retro 80s/90s design aesthe
 - **Web Audio API**: Browser-native sound effects
 - **Intersection Observer**: Efficient viewport-based animations
 
-## 📁 File Structure
+##  File Structure
 
 ```
 portfolio/
@@ -49,7 +49,7 @@ portfolio/
 └── README.md           # This file
 ```
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Quick Start
 1. Download all three files (`index.html`, `styles.css`, `script.js`)
@@ -76,7 +76,7 @@ php -S localhost:8000
 
 Then visit `http://localhost:8000` in your browser.
 
-## 🎨 Customization
+##  Customization
 
 ### Changing Colors
 Edit the CSS variables in `styles.css`:
@@ -108,7 +108,7 @@ To add background music:
 1. Add audio file reference to the `<audio>` tag in HTML
 2. Implement playback in `script.js` with the sound manager
 
-## ⌨️ Keyboard Shortcuts
+##  Keyboard Shortcuts
 
 | Key | Action |
 |-----|--------|
@@ -122,17 +122,17 @@ To add background music:
 ### Easter Egg
 Try the Konami Code: ↑ ↑ ↓ ↓ ← → ← → B A
 
-## 🎵 Sound Features
+##  Sound Features
 
 The portfolio uses the Web Audio API to generate retro 8-bit style sounds:
 - **Button Click**: Square wave beep (800Hz)
 - **Success**: Ascending three-tone sequence
 - **Error**: Descending two-tone sequence
-- **Toggle Sound**: Click the 🔊 icon or press M
+- **Toggle Sound**: Click the sound icon or press M
 
-Sounds are disabled by default (muted icon 🔇). Users can enable them by clicking the sound toggle.
+Sounds are disabled by default (muted icon sound). Users can enable them by clicking the sound toggle.
 
-## 🎬 Animation Details
+##  Animation Details
 
 ### Loading Screen
 - 2.5-second animated progress bar
@@ -160,14 +160,14 @@ Sounds are disabled by default (muted icon 🔇). Users can enable them by click
 - Gradient neon colors
 - 30-particle limit for performance
 
-## 📱 Responsive Breakpoints
+##  Responsive Breakpoints
 
 - **Desktop**: 1400px+ (full features)
 - **Tablet**: 769px - 1399px (optimized grid)
 - **Mobile**: 480px - 768px (single column)
 - **Small Mobile**: < 480px (minimal layout)
 
-## 🎮 Component Showcase
+##  Component Showcase
 
 ### Terminal Windows
 Classic Windows 95-style terminals with title bars, minimize/maximize/close buttons, and retro text effects.
@@ -184,14 +184,14 @@ Hover-activated cards with elevation effect and color transitions.
 ### Contact Form
 Terminal-styled form inputs with focus states and validation feedback.
 
-## 🚀 Performance Tips
+##  Performance Tips
 
 1. **Reduce Particle Count**: Edit `maxDots` in cursor trail for lower-end devices
 2. **Disable Animations**: Use prefers-reduced-motion setting
 3. **Image Optimization**: If adding images, optimize for web
 4. **Code Splitting**: For larger projects, separate JavaScript into modules
 
-## 🔧 Browser Compatibility
+##  Browser Compatibility
 
 - Chrome/Edge: Full support
 - Firefox: Full support
@@ -206,7 +206,7 @@ Terminal-styled form inputs with focus states and validation feedback.
 - Intersection Observer
 - ES6 JavaScript
 
-## 📚 JavaScript Classes
+##  JavaScript Classes
 
 ### SoundManager
 Manages all audio effects using Web Audio API.
@@ -229,7 +229,7 @@ cursorTrail.clearTrail();
 ### FPSCounter
 Monitors and displays frames per second.
 
-## 🎨 CSS Custom Properties
+##  CSS Custom Properties
 
 All major colors, fonts, and effects use CSS variables for easy customization:
 
@@ -247,7 +247,7 @@ All major colors, fonts, and effects use CSS variables for easy customization:
 --shadow-neon-purple: 0 0 20px rgba(180, 19, 255, 0.5);
 ```
 
-## 🔐 Security Notes
+##  Security Notes
 
 This is a front-end portfolio with no backend. The contact form:
 - Does NOT send emails
@@ -260,7 +260,7 @@ For production, integrate with:
 - EmailJS
 - Your own backend service
 
-## 📝 Content Tips
+##  Content Tips
 
 ### About Section
 Keep it concise (2-3 sentences per card). Use the three cards to highlight:
@@ -281,7 +281,7 @@ List core competencies with honest percentage estimates. Focus on:
 - Skills that define your expertise
 - Areas you're passionate about
 
-## 🎯 Deployment
+##  Deployment
 
 ### Netlify
 1. Push files to GitHub
@@ -303,7 +303,7 @@ List core competencies with honest percentage estimates. Focus on:
 2. Update domain settings
 3. Done!
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Animations Not Working
 - Check browser compatibility
@@ -311,7 +311,7 @@ List core competencies with honest percentage estimates. Focus on:
 - Clear browser cache and hard refresh (Ctrl+Shift+R)
 
 ### Sounds Not Playing
-- Enable sound toggle (🔊 button)
+- Enable sound toggle
 - Check browser allows audio (permissions)
 - Open browser console for errors
 
@@ -327,7 +327,7 @@ List core competencies with honest percentage estimates. Focus on:
 - Use mobile DevTools in browser
 - Verify media queries are correct
 
-## 📖 Learn More
+##  Learn More
 
 ### Web Audio API
 - https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API
@@ -342,16 +342,12 @@ List core competencies with honest percentage estimates. Focus on:
 - https://en.wikipedia.org/wiki/Vaporwave
 - https://en.wikipedia.org/wiki/Synthwave
 
-## 📄 License
+##  License
 
 This portfolio template is free to use and modify. Credit is appreciated but not required!
 
-## 🎮 Have Fun!
+##  Have Fun!
 
 This portfolio is meant to be enjoyed. Explore the keyboard shortcuts, find the easter egg, and let your personality shine through the retro aesthetic.
 
 ---
-
-**Made with ❤️ and Neon Vibes** ✨
-
-Questions? Check the code comments for detailed explanations of how everything works!
