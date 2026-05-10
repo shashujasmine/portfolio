@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="banner.png" alt="Retro Portfolio Banner" width="100%">
-</p>
-
 #  RETRO PORTFOLIO - 80s/90s Aesthetic
 
 A stunning personal portfolio website with authentic retro 80s/90s design aesthetic, complete with neon colors, glitch effects, CRT screen effects, pixel art elements, and smooth animations.
