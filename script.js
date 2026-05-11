@@ -1,11 +1,4 @@
-/* ============================================
-   PORTFOLIO — JAVASCRIPT
-   Smooth interactions & scroll effects
-   ============================================ */
 
-// ============================================
-// INITIALIZATION
-// ============================================
 
 document.addEventListener('DOMContentLoaded', () => {
     initNavbar();
@@ -17,9 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
 });
 
-// ============================================
-// NAVBAR — Scroll-based background & shrink
-// ============================================
 
 function initNavbar() {
     const navbar = document.getElementById('navbar');
@@ -28,7 +18,7 @@ function initNavbar() {
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
 
-        // Add scrolled class for background blur
+
         if (currentScroll > 50) {
             navbar.classList.add('scrolled');
         } else {
@@ -39,9 +29,7 @@ function initNavbar() {
     }, { passive: true });
 }
 
-// ============================================
-// SMOOTH SCROLLING — Navigation links
-// ============================================
+
 
 function initSmoothScroll() {
     const links = document.querySelectorAll('a[href^="#"]');
@@ -61,16 +49,14 @@ function initSmoothScroll() {
                     behavior: 'smooth'
                 });
 
-                // Close mobile menu if open
+
                 closeMobileMenu();
             }
         });
     });
 }
 
-// ============================================
-// REVEAL ANIMATIONS — Intersection Observer
-// ============================================
+
 
 function initRevealAnimations() {
     const reveals = document.querySelectorAll('.reveal');
@@ -90,9 +76,6 @@ function initRevealAnimations() {
     reveals.forEach(el => observer.observe(el));
 }
 
-// ============================================
-// SKILL BARS — Animate on scroll
-// ============================================
 
 function initSkillBars() {
     const skillFills = document.querySelectorAll('.skill-fill');
@@ -114,9 +97,7 @@ function initSkillBars() {
     skillFills.forEach(fill => observer.observe(fill));
 }
 
-// ============================================
-// SCROLL PROGRESS BAR
-// ============================================
+
 
 function initScrollProgress() {
     const progressBar = document.getElementById('scrollProgress');
@@ -130,9 +111,7 @@ function initScrollProgress() {
     }, { passive: true });
 }
 
-// ============================================
-// CONTACT FORM — Validation & Feedback
-// ============================================
+
 
 function initContactForm() {
     const form = document.getElementById('contactForm');
@@ -147,19 +126,19 @@ function initContactForm() {
         const email = document.getElementById('email').value.trim();
         const message = document.getElementById('message').value.trim();
 
-        // Basic validation
+
         if (!name || !email || !message) return;
 
-        // Visual feedback
+
         const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Sent ✓';
         submitBtn.style.background = 'var(--color-muted)';
         submitBtn.disabled = true;
 
-        // Log the submission (replace with real API in production)
+
         console.log('Form submitted:', { name, email, message });
 
-        // Reset after delay
+
         setTimeout(() => {
             form.reset();
             submitBtn.textContent = originalText;
@@ -168,7 +147,6 @@ function initContactForm() {
         }, 2500);
     });
 
-    // Focus effects for form inputs
     const inputs = form.querySelectorAll('input, textarea');
     inputs.forEach(input => {
         input.addEventListener('focus', () => {
@@ -181,9 +159,7 @@ function initContactForm() {
     });
 }
 
-// ============================================
-// MOBILE MENU
-// ============================================
+
 
 function initMobileMenu() {
     const toggle = document.getElementById('navToggle');
@@ -242,25 +218,36 @@ function closeMobileMenu() {
 // SUBTLE CURSOR GLOW (Desktop only)
 // ============================================
 
+// ============================================
+// SUBTLE BACKGROUND PARALLAX
+// ============================================
+
+(function initBackgroundParallax() {
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        document.body.style.backgroundPositionY = -(scrolled * 0.15) + 'px';
+    }, { passive: true });
+})();
+
 (function initCursorGlow() {
     if (window.matchMedia('(pointer: coarse)').matches) return;
 
     const glow = document.createElement('div');
     glow.style.cssText = `
         position: fixed;
-        width: 400px;
-        height: 400px;
+        width: 600px;
+        height: 600px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(175,172,161,0.04) 0%, transparent 70%);
+        background: radial-gradient(circle, rgba(189,187,178,0.03) 0%, transparent 70%);
         pointer-events: none;
         z-index: 0;
-        transition: transform 0.15s ease;
+        transition: transform 0.2s ease-out;
         will-change: transform;
     `;
     document.body.appendChild(glow);
 
     document.addEventListener('mousemove', (e) => {
-        glow.style.transform = `translate(${e.clientX - 200}px, ${e.clientY - 200}px)`;
+        glow.style.transform = `translate(${e.clientX - 300}px, ${e.clientY - 300}px)`;
     }, { passive: true });
 })();
 
@@ -269,10 +256,10 @@ function closeMobileMenu() {
 // ============================================
 
 console.log(
-    '%cportfolio.',
-    'color: #C9C8BF; font-size: 24px; font-weight: 600; font-family: sans-serif;'
+    '%cPORTFOLIO.',
+    'color: #EDEDED; font-size: 24px; font-weight: 200; font-family: Montserrat, sans-serif; letter-spacing: 4px;'
 );
 console.log(
-    '%cMinimal. Modern. Intentional.',
-    'color: #AFACA1; font-size: 12px; font-family: sans-serif;'
+    '%cDark. Minimalist. Precise.',
+    'color: #BDBBB2; font-size: 10px; font-family: Montserrat, sans-serif; text-transform: uppercase; letter-spacing: 2px;'
 );
