@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initRevealAnimations();
     initSkillBars();
     initScrollProgress();
-    initContactForm();
     initMobileMenu();
+    initTouchGlow();
 });
 
 
@@ -113,51 +113,7 @@ function initScrollProgress() {
 
 
 
-function initContactForm() {
-    const form = document.getElementById('contactForm');
-    const submitBtn = document.getElementById('submitBtn');
-
-    if (!form) return;
-
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const message = document.getElementById('message').value.trim();
-
-
-        if (!name || !email || !message) return;
-
-
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Sent ✓';
-        submitBtn.style.background = 'var(--color-muted)';
-        submitBtn.disabled = true;
-
-
-        console.log('Form submitted:', { name, email, message });
-
-
-        setTimeout(() => {
-            form.reset();
-            submitBtn.textContent = originalText;
-            submitBtn.style.background = '';
-            submitBtn.disabled = false;
-        }, 2500);
-    });
-
-    const inputs = form.querySelectorAll('input, textarea');
-    inputs.forEach(input => {
-        input.addEventListener('focus', () => {
-            input.parentElement.classList.add('focused');
-        });
-
-        input.addEventListener('blur', () => {
-            input.parentElement.classList.remove('focused');
-        });
-    });
-}
+/* Contact form logic removed */
 
 
 
@@ -171,6 +127,22 @@ function initMobileMenu() {
         toggle.classList.toggle('active');
         menu.classList.toggle('open');
         document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+    });
+}
+
+function initTouchGlow() {
+    const interactives = document.querySelectorAll('.contact-link, .project-link, .back-to-top, .nav-link, .btn, .nav-toggle');
+    
+    interactives.forEach(el => {
+        el.addEventListener('touchstart', () => {
+            el.classList.add('touch-active');
+        }, { passive: true });
+        
+        el.addEventListener('touchend', () => {
+            setTimeout(() => {
+                el.classList.remove('touch-active');
+            }, 400);
+        }, { passive: true });
     });
 }
 
