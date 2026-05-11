@@ -348,11 +348,18 @@ h1, h2, h3, .section-label {
     aspect-ratio: 16/10;
     background: var(--color-card);
     margin-bottom: var(--space-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    color: var(--color-border);
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition);
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
 }
 
 .project-title {
