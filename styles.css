@@ -337,6 +337,17 @@ h1, h2, h3, .section-label {
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    cursor: pointer;
+}
+
+.stretched-link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
 }
 
 .project-card::before {
@@ -453,49 +464,6 @@ h1, h2, h3, .section-label {
     transition: width 1.5s var(--transition);
 }
 
-/* ============================================
-   CONTACT SECTION
-   ============================================ */
-.contact-layout {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.contact-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-md);
-    margin-top: var(--space-xl);
-}
-
-.contact-link {
-    display: flex;
-    align-items: center;
-    gap: var(--space-md);
-    font-size: 0.9rem;
-    color: var(--color-text-sec);
-    transition: all var(--transition-fast);
-}
-
-.link-icon {
-    font-size: 1.2rem;
-    color: var(--color-accent);
-    transition: all var(--transition-fast);
-}
-
-.contact-link:hover {
-    color: var(--color-text-pri);
-}
-
-.contact-link:hover .link-icon, .contact-link:active .link-icon, .contact-link.touch-active .link-icon {
-    text-shadow: 0 0 20px var(--color-accent), 0 0 40px var(--color-accent);
-    transform: scale(1.2);
-    color: var(--color-text-pri);
-}
-
-/* Form styles removed as form is deleted */
 
 /* ============================================
    ANIMATIONS

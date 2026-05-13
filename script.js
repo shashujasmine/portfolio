@@ -131,7 +131,7 @@ function initMobileMenu() {
 }
 
 function initTouchGlow() {
-    const interactives = document.querySelectorAll('.contact-link, .project-link, .back-to-top, .nav-link, .btn, .nav-toggle');
+    const interactives = document.querySelectorAll('.project-link, .back-to-top, .nav-link, .btn, .nav-toggle');
     
     interactives.forEach(el => {
         el.addEventListener('touchstart', () => {

@@ -2,6 +2,8 @@
 
 A stunning personal portfolio website with authentic retro 80s/90s design aesthetic, complete with neon colors, glitch effects, CRT screen effects, pixel art elements, and smooth animations.
 
+NOTE:
+ "it is a portfolio design , it is not a full working structure."
 ##  Features
 
 ### Design Elements
