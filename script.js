@@ -113,8 +113,6 @@ function initScrollProgress() {
 
 
 
-/* Contact form logic removed */
-
 
 
 function initMobileMenu() {
@@ -132,12 +130,12 @@ function initMobileMenu() {
 
 function initTouchGlow() {
     const interactives = document.querySelectorAll('.project-link, .back-to-top, .nav-link, .btn, .nav-toggle');
-    
+
     interactives.forEach(el => {
         el.addEventListener('touchstart', () => {
             el.classList.add('touch-active');
         }, { passive: true });
-        
+
         el.addEventListener('touchend', () => {
             setTimeout(() => {
                 el.classList.remove('touch-active');

@@ -388,7 +388,7 @@ h3,
 .project-tags {
     display: flex;
     gap: var(--space-sm);
-    flex-wrap: wrap;
+    flex-wrap: wr ap;
 }
 
 .project-tags span {
@@ -454,9 +454,6 @@ h3,
 
 
 
-/* ============================================
-   CONTACT SECTION
-   ============================================ */
 .contact-content {
     max-width: 800px;
 }
@@ -519,7 +516,6 @@ h3,
     color: var(--color-text-pri);
 }
 
-/* Nav Additions */
 .nav-separator {
     width: 1px;
     height: 20px;
