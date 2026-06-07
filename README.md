@@ -1,73 +1,144 @@
-#  RETRO PORTFOLIO - 80s/90s Aesthetic
+# MINIMALIST PORTFOLIO — Dark & Precise Aesthetic
 
-A stunning personal portfolio website with authentic retro 80s/90s design aesthetic, complete with neon colors, glitch effects, CRT screen effects, pixel art elements, and smooth animations.
+A high-end, responsive personal portfolio website with a sleek, minimalist dark design. The site focuses on clean structure, premium typography, subtle animations, and modern interactive elements.
 
-NOTE:
- "it is a portfolio design , it is not a full working structure."
-##  Features
+> [!NOTE]
+> This is a static portfolio showcasing modern front-end design systems and client-side interactions, with zero external dependencies.
 
-### Design Elements
-- **Neon Color Palette**: Vibrant pink (#FF10F0), cyan (#00FFFF), purple (#B413FF) on dark background
-- **CRT Screen Effects**: Authentic scanlines and subtle flicker animations
-- **Glitch Effects**: Dynamic glitch text animations with RGB shifts
-- **Arcade Typography**: Retro arcade and computer fonts (Orbitron, Space Mono)
-- **Terminal Windows**: Classic 90s OS-style terminal interface components
-- **Grid Layouts**: Old-school UI aesthetic with modern responsiveness
+---
 
-### Interactive Features
-- **Loading Screen**: Animated retro loading bar with Press Start prompt
-- **Smooth Scrolling**: Beautiful scroll animations and transitions
-- **Sound Effects**: 8-bit style beep sounds for interactions (Web Audio API)
-- **Cursor Trail**: Neon particle trail following your mouse
-- **Button Ripple Effects**: Interactive ripple animations on clicks
-- **Sound Toggle**: Mute/unmute background sounds easily
-- **Form Validation**: Retro-styled contact form with feedback
-- **FPS Counter**: Real-time performance monitor in footer
-- **Keyboard Shortcuts**: Quick navigation with number keys (1-5) and M for sound
+## ✦ Design System & Aesthetics
 
-### Sections
-1. **Home**: Terminal-style intro with animated welcome message
-2. **About**: Retro card layout with profile, mission, and experience
-3. **Projects**: Arcade-style project tiles with tags and descriptions
-4. **Skills**: Retro progress bars with shimmer effect
-5. **Contact**: Terminal-style form with social links
+- **Dark Interface**: Deep gray/black background (`#0B0B0C`) paired with dark card surfaces (`#1E1E1E` / `#141413`) for comfortable reading.
+- **Warm Silver Accent**: Minimalist gray/silver accent color (`#BDBBB2`) used selectively for highlight components, links, and borders.
+- **Premium Typography**: Combines Google Fonts [Montserrat](https://fonts.google.com/specimen/Montserrat) (spaced out, lightweight headings) and [Inter](https://fonts.google.com/specimen/Inter) (clean, highly readable body copy).
+- **Desktop Glow Halo**: A subtle client-side radial glow effect that dynamically tracks the cursor across the screen.
+- **Background Parallax**: Dynamic scrolling texture effect that shifts background position Y as you scroll down the page.
 
-### Technical Features
-- **Fully Responsive**: Mobile, tablet, and desktop optimized
-- **Dark Mode Default**: Eye-friendly dark theme
-- **Accessibility**: Respects prefers-reduced-motion and keyboard navigation
-- **No Dependencies**: Pure HTML, CSS, and JavaScript (no frameworks required)
-- **Performance Optimized**: Smooth 60fps animations
-- **Web Audio API**: Browser-native sound effects
-- **Intersection Observer**: Efficient viewport-based animations
+---
 
-##  File Structure
+## ✦ Core Features
+
+### 1. Viewport Animations
+- **Intersection Observer Reveal**: Fade-in and slide-up animations applied automatically to sections and components (`.reveal`) when they enter the viewport.
+- **Animated Skill Bars**: Skill progress indicators that animate to their target percentages only when they become visible to the user.
+
+### 2. Layout & Navigation
+- **Dynamic Blur Navbar**: Fixed navigation bar that adds a background blur effect, borders, and reduces padding upon scrolling.
+- **Scroll Progress Indicator**: A sleek 1px progress bar at the very top of the page representing current reading completion.
+- **Active Navigation Tracking**: Highlights the active menu items dynamically depending on which section is currently centered in the viewport.
+- **Hamburger Menu**: A custom-coded mobile menu toggle animation for smaller viewport widths.
+
+### 3. Polish & Optimization
+- **Touch-Friendly Micro-Interactions**: Custom touch listeners (`touchstart` & `touchend`) that add visual feedback/glow effects for mobile touch controls.
+- **Console Branding**: Custom-styled console welcome message printed in the browser developer tools.
+- **No Dependencies**: Powered entirely by vanilla HTML5, CSS3, and modern ES6 JavaScript.
+
+---
+
+## 📁 File Structure
 
 ```
 portfolio/
-├── index.html          # HTML structure and content
-├── styles.css          # All CSS styles and animations
-├── script.js           # JavaScript interactions and effects
-└── README.md           # This file
+├── index.html          # HTML structure & portfolio data
+├── styles.css          # Color scheme, typography, layouts, and animations
+├── script.js           # Interactive features, cursor glow, and scroll logic
+└── README.md           # Documentation
 ```
 
-##  Getting Started
+---
 
-### Quick Start
-1. Download all three files (`index.html`, `styles.css`, `script.js`)
-2. Place them in the same directory
-3. Open `index.html` in a web browser
-4. Enjoy the retro experience!
+## 🚀 Projects Catalog
 
-### Local Server (Recommended)
-For the best experience and to avoid any CORS issues:
+The portfolio showcases 4 major projects with full-featured preview cards:
+
+1. **Nexus Arcade** (2026)
+   - **Type**: Web Application
+   - **Tech Stack**: JavaScript, Canvas API, CSS
+   - **URL**: https://memorycard-omega.vercel.app/
+   - **Description**: A retro-styled gaming platform featuring classic arcade games with modern web technologies.
+
+2. **Quiz Master** (2026)
+   - **Type**: Education
+   - **Tech Stack**: React, Node.js, MongoDB
+   - **URL**: https://math-one-cyan.vercel.app/
+   - **Description**: Interactive quiz platform for C Programming and Mathematics with real-time scoring and analytics.
+
+3. **Game Studio** (2025)
+   - **Type**: Game Development
+   - **Tech Stack**: Phaser, React, TypeScript
+   - **URL**: https://gaming-forge.vercel.app/
+   - **Description**: A professional game development hub featuring advanced assets, interactive demos, and studio-grade components.
+
+4. **Beloved Connect** (2025)
+   - **Type**: Social Platform
+   - **Tech Stack**: Next.js, PostgreSQL, Prisma
+   - **URL**: https://beloved-connect-mkkq.vercel.app/
+   - **Description**: A sophisticated social connection platform built for meaningful interactions and community building.
+
+---
+
+## 📊 Skills Profile
+
+Displays competencies with clean, animated level bars:
+- **HTML / CSS**: 95%
+- **JavaScript**: 90%
+- **React**: 88%
+- **UI / UX Design**: 92%
+- **Node.js**: 80%
+- **Responsive Design**: 94%
+
+---
+
+## 🛠️ Code Architecture
+
+### CSS Custom Properties (`styles.css`)
+Customization of layout styles and color palettes can be handled via CSS variables:
+
+```css
+:root {
+    --color-bg: #0B0B0C;        /* Main dark background */
+    --color-surface: #141413;   /* Secondary section surface */
+    --color-card: #1E1E1E;      /* Component card background */
+    --color-border: #2A2A2A;    /* Layout lines & borders */
+    --color-accent: #BDBBB2;    /* Interactive accent color */
+    --color-text-pri: #EDEDED;  /* Highlight text */
+    --color-text-sec: #AFAFAF;  /* Secondary readable text */
+    
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+```
+
+### JavaScript Engine Components (`script.js`)
+
+- `initNavbar()`: Detects scrolling to apply/remove the `.scrolled` state (adding background blur and reducing vertical padding).
+- `initSmoothScroll()`: Hooks standard link anchors (`#`) to animate page scrolling, subtracting fixed navbar offsets.
+- `initRevealAnimations()`: Triggers viewport animations via `IntersectionObserver` on `.reveal` elements.
+- `initSkillBars()`: Runs target fill-width transitions for the skills grid metrics when they enter viewport visibility.
+- `initScrollProgress()`: Renders the active layout width of the top `#scrollProgress` bar.
+- `initMobileMenu()`: Manages mobile overlay display, disabling page scroll in opened state.
+- `initTouchGlow()`: Implements quick micro-animation feedback to mobile interactions.
+- `initActiveNav()`: Observes viewport locations to highlight correct navbar items on scroll.
+- `initBackgroundParallax()`: Performs subtle body background position translations.
+- `initCursorGlow()`: Spawns a gradient follower tracking non-touch screen pointers.
+
+---
+
+## 💻 Customization Guide
+
+### Updating Content
+- **Bio & Identity**: Modify the `.hero-content` text block in [index.html](file:///e:/portfolio/index.html).
+- **Personal Details**: Adjust metrics inside `.about-details` (Years, Projects, Clients) in [index.html](file:///e:/portfolio/index.html).
+- **Project Items**: Update the `.projects-grid` with new cards (`.project-card`) featuring local preview pictures and direct Vercel links.
+- **Contact Channels**: Edit mailto references (`shashujasmine@example.com`) and GitHub links (`@shashujasmine`) in the contact section.
+
+### Local Development Setup
+To run the portfolio without any CORS issues:
 
 ```bash
 # Using Python 3
 python -m http.server 8000
-
-# Using Python 2
-python -m SimpleHTTPServer 8000
 
 # Using Node.js (with http-server)
 npx http-server
@@ -75,281 +146,17 @@ npx http-server
 # Using PHP
 php -S localhost:8000
 ```
-
-Then visit `http://localhost:8000` in your browser.
-
-##  Customization
-
-### Changing Colors
-Edit the CSS variables in `styles.css`:
-
-```css
-:root {
-    --color-bg: #0a0e27;        /* Background */
-    --color-pink: #FF10F0;      /* Primary neon */
-    --color-cyan: #00FFFF;      /* Secondary neon */
-    --color-purple: #B413FF;    /* Tertiary neon */
-}
-```
-
-### Updating Content
-All content sections are in `index.html`:
-- **About Section**: Edit `.about-card` divs
-- **Projects**: Update `.project-card` entries
-- **Skills**: Modify skill items with desired percentages
-- **Contact**: Change email and social links
-
-### Customizing Fonts
-The portfolio uses Google Fonts. To change:
-1. Edit the `@import` link in HTML head
-2. Update `--font-arcade` and `--font-mono` in CSS
-3. Apply to relevant elements
-
-### Adding Background Music
-To add background music:
-1. Add audio file reference to the `<audio>` tag in HTML
-2. Implement playback in `script.js` with the sound manager
-
-##  Keyboard Shortcuts
-
-| Key | Action |
-|-----|--------|
-| `1` | Jump to Home |
-| `2` | Jump to About |
-| `3` | Jump to Projects |
-| `4` | Jump to Skills |
-| `5` | Jump to Contact |
-| `M` | Toggle Sound |
-
-### Easter Egg
-Try the Konami Code: ↑ ↑ ↓ ↓ ← → ← → B A
-
-##  Sound Features
-
-The portfolio uses the Web Audio API to generate retro 8-bit style sounds:
-- **Button Click**: Square wave beep (800Hz)
-- **Success**: Ascending three-tone sequence
-- **Error**: Descending two-tone sequence
-- **Toggle Sound**: Click the sound icon or press M
-
-Sounds are disabled by default (muted icon sound). Users can enable them by clicking the sound toggle.
-
-##  Animation Details
-
-### Loading Screen
-- 2.5-second animated progress bar
-- "Press Start" blinking text
-- Smooth fade-out after completion
-
-### Glitch Text
-- Random RGB shift offsets
-- Clip-path based animation
-- Multiple layers for 3D effect
-
-### Scanlines & Flicker
-- Authentic CRT monitor simulation
-- Continuous moving scanline effect
-- Subtle opacity flicker
-
-### Parallax
-- Subtle depth effect on scroll
-- Terminal window parallax movement
-- Smooth mathematical easing
-
-### Cursor Trail
-- Particle-based trail effect
-- Random particle sizes
-- Gradient neon colors
-- 30-particle limit for performance
-
-##  Responsive Breakpoints
-
-- **Desktop**: 1400px+ (full features)
-- **Tablet**: 769px - 1399px (optimized grid)
-- **Mobile**: 480px - 768px (single column)
-- **Small Mobile**: < 480px (minimal layout)
-
-##  Component Showcase
-
-### Terminal Windows
-Classic Windows 95-style terminals with title bars, minimize/maximize/close buttons, and retro text effects.
-
-### Neon Buttons
-Animated border-fill buttons with smooth color transitions and glow effects on hover.
-
-### Progress Bars
-Retro-styled progress bars with gradient fill and shimmer animation.
-
-### Project Cards
-Hover-activated cards with elevation effect and color transitions.
-
-### Contact Form
-Terminal-styled form inputs with focus states and validation feedback.
-
-##  Performance Tips
-
-1. **Reduce Particle Count**: Edit `maxDots` in cursor trail for lower-end devices
-2. **Disable Animations**: Use prefers-reduced-motion setting
-3. **Image Optimization**: If adding images, optimize for web
-4. **Code Splitting**: For larger projects, separate JavaScript into modules
-
-##  Browser Compatibility
-
-- Chrome/Edge: Full support
-- Firefox: Full support
-- Safari: Full support (iOS 12.2+)
-- Internet Explorer: Not supported (uses modern CSS Grid, Flexbox, ES6)
-
-### Required Features
-- CSS Grid
-- CSS Flexbox
-- CSS Custom Properties
-- Web Audio API (optional for sounds)
-- Intersection Observer
-- ES6 JavaScript
-
-##  JavaScript Classes
-
-### SoundManager
-Manages all audio effects using Web Audio API.
-
-```javascript
-soundManager.playBeep(frequency, duration);
-soundManager.playSuccess();
-soundManager.playError();
-soundManager.toggle(); 
-```
-
-### CursorTrail
-Creates particle trail following mouse movement.
-
-```javascript
-cursorTrail.createDot();
-cursorTrail.clearTrail();
-```
-
-### FPSCounter
-Monitors and displays frames per second.
-
-##  CSS Custom Properties
-
-All major colors, fonts, and effects use CSS variables for easy customization:
-
-```css
---color-bg: #0a0e27;
---color-pink: #FF10F0;
---color-cyan: #00FFFF;
---color-purple: #B413FF;
---color-white: #FFFFFF;
---color-text: #E0E0E0;
---font-arcade: 'Orbitron', monospace;
---font-mono: 'Space Mono', monospace;
---shadow-neon-pink: 0 0 20px rgba(255, 16, 240, 0.5);
---shadow-neon-cyan: 0 0 20px rgba(0, 255, 255, 0.5);
---shadow-neon-purple: 0 0 20px rgba(180, 19, 255, 0.5);
-```
-
-##  Security Notes
-
-This is a front-end portfolio with no backend. The contact form:
-- Does NOT send emails
-- Does NOT store data
-- Only logs to browser console
-
-For production, integrate with:
-- Formspree
-- Netlify Forms
-- EmailJS
-- Your own backend service
-
-##  Content Tips
-
-### About Section
-Keep it concise (2-3 sentences per card). Use the three cards to highlight:
-1. Your professional profile
-2. Your mission/values
-3. Your experience/background
-
-### Projects
-Include:
-- Clear project title
-- 1-2 sentence description
-- Relevant technology tags
-- Link to live demo or GitHub
-
-### Skills
-List core competencies with honest percentage estimates. Focus on:
-- Technologies you use frequently
-- Skills that define your expertise
-- Areas you're passionate about
-
-##  Deployment
-
-### Netlify
-1. Push files to GitHub
-2. Connect Netlify to repository
-3. Deploy automatically on push
-
-### Vercel
-1. Push files to GitHub
-2. Import project in Vercel
-3. Deploy with one click
-
-### GitHub Pages
-1. Create repository named `username.github.io`
-2. Push portfolio files
-3. Access at `https://username.github.io`
-
-### Traditional Hosting
-1. FTP files to hosting server
-2. Update domain settings
-3. Done!
-
-##  Troubleshooting
-
-### Animations Not Working
-- Check browser compatibility
-- Verify CSS file is loaded (check Network tab)
-- Clear browser cache and hard refresh (Ctrl+Shift+R)
-
-### Sounds Not Playing
-- Enable sound toggle
-- Check browser allows audio (permissions)
-- Open browser console for errors
-
-### Performance Issues
-- Disable cursor trail on mobile
-- Reduce scanline frequency
-- Disable parallax on lower-end devices
-- Check for large unoptimized images
-
-### Mobile Display Issues
-- Check viewport meta tag in HTML
-- Test on actual devices
-- Use mobile DevTools in browser
-- Verify media queries are correct
-
-##  Learn More
-
-### Web Audio API
-- https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API
-
-### CSS Animations
-- https://developer.mozilla.org/en-US/docs/Web/CSS/animation
-
-### Intersection Observer
-- https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
-
-### Retro Design
-- https://en.wikipedia.org/wiki/Vaporwave
-- https://en.wikipedia.org/wiki/Synthwave
-
-##  License
-
-This portfolio template is free to use and modify. Credit is appreciated but not required!
-
-##  Have Fun!
-
-This portfolio is meant to be enjoyed. Explore the keyboard shortcuts, find the easter egg, and let your personality shine through the retro aesthetic.
+Open `http://localhost:8000` in your web browser.
 
 ---
+
+## 🌐 Compatibility
+
+- **Chrome / Edge / Firefox / Safari**: Fully compatible.
+- **Required Browser APIs**: CSS Grid, Flexbox, Custom Properties, `IntersectionObserver`, and modern ES6 JS.
+- **Internet Explorer**: Not supported.
+
+---
+
+## 📄 License
+This portfolio template is open-source. Feel free to use and modify it for your own branding.
